@@ -11,9 +11,9 @@ $('.computing').click(function(){
 });*/
 
 $('.box_text').toggle();
-$('.computing').click(function(){
-    $('.box_text').toggle();
-});
+/*$('#computing').click(function(){
+    
+});*/
 
 $('.tab2').toggle();
 $('.tickets').click(function(){
