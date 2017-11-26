@@ -16,31 +16,11 @@ body {
     margin: 10px 15px 0px 30px;
 }
 
-#selection .in {
-    display: inline;
-}
-
-#selection .Date {
-    display: inline;
-}
-
-#selection .Sort {
-    display: inline;
-}
-
-#selection .type {
-    display: inline;
-}
-
 #selection .view {
     display: inline;
 }
 
 #selection .transplant {
-    display: inline;
-}
-
-#selection form p {
     display: inline;
 }
 
@@ -52,12 +32,6 @@ body {
     text-align: center;
     padding-top: 18px;
     position: relative;
-    /* Включаем режим Flexbox. */
-    /*display: flex; */
-    /* Распределяем элементы внутри шапки */
-    /*justify-content: space-between;*/
-    /* Выравниваем элементы вертикально по центру. */
-    /*align-items: center;*/
 }
 
 #logo {
@@ -65,7 +39,6 @@ body {
     position: absolute;
     left: 20px;
     padding: 0 40px;
-    /*margin-right: 50px;*/
     font-size: 20px;
     font-weight: 100;
     text-align: left;
@@ -116,22 +89,6 @@ body {
     margin-bottom: 35px;
 }
 
-#content h3 {
-    color: #242424;
-    font-size: 35px;
-    font-weight: 300;
-    text-align: left;
-    margin-left: 41px;
-    margin-top: 50px;
-    margin-bottom: 52px;
-}
-
-#content h5 {
-    color: #242424;
-    font-size: 24px;
-    text-align: left;
-}
-
 #content #map {
     width: 720px;
     height: 500px;
@@ -168,11 +125,7 @@ body {
     text-decoration: none;
 }
 
-#content .media {
-    margin-right: 0;
-}
-
-#content #box {
+/*#content #box {
     background-color: #ffffff;
     width: 1238px;
     margin: 0 auto;
@@ -214,7 +167,7 @@ body {
 
 #content #box a:hover {
     background-color: #5ba1d3;
-}
+}*/
 
 #footer {
     background-color: #434445;
@@ -234,24 +187,9 @@ body {
     display: inline;
 }
 
-#click_to_view_a_marker {
-    /*background-color: #b5b7ba;*/
+.Way {
     width: 495px;
     cursor: pointer;
-    /*height: 100px;*/
-}
-
-/*#click_to_view_a_marker:hover {
-    background-color: #4d4d4d; 
-}
-
-#click_to_view_a_marker:hover span{
-    color: #fff;
-}
-*/
-
-.in {
-    background: transparent;
 }
 
 .menu_head {
@@ -285,12 +223,7 @@ body {
     height: 20px;
 }
 
-.type {
-    width: 20px;
-    height: 20px;
-}
-
-.computing {
+#computing {
     width: 80px;
     height: 40px;
 }
@@ -301,14 +234,13 @@ body {
 }
 
 #Admin {
-    border: 1px solid #333; /* Рамка */
     display: inline-block;
     padding: 5px 15px; /* Поля */
     text-decoration: none; /* Убираем подчёркивание */
     color: #000; /* Цвет текста */
+    width: 40px;
+    height: 40px;
   }
 #Admin:hover {
     box-shadow: 0 0 5px rgba(0,0,0,0.3); /* Тень */
-    background: linear-gradient(to bottom, #fcfff4, #e9e9ce); /* Градиент */
-    color: #a00;
    }

@@ -18,6 +18,7 @@ body {
 
 #selection .in {
     display: inline;
+    background: transparent;
 }
 
 #selection .Date {
@@ -30,10 +31,14 @@ body {
 
 #selection .type {
     display: inline;
+    width: 20px;
+    height: 20px;
 }
 
 #selection .view {
     display: inline;
+    width: 20px;
+    height: 20px;
 }
 
 #selection .transplant {
@@ -52,12 +57,6 @@ body {
     text-align: center;
     padding-top: 18px;
     position: relative;
-    /* Включаем режим Flexbox. */
-    /*display: flex; */
-    /* Распределяем элементы внутри шапки */
-    /*justify-content: space-between;*/
-    /* Выравниваем элементы вертикально по центру. */
-    /*align-items: center;*/
 }
 
 #logo {
@@ -65,7 +64,6 @@ body {
     position: absolute;
     left: 20px;
     padding: 0 40px;
-    /*margin-right: 50px;*/
     font-size: 20px;
     font-weight: 100;
     text-align: left;
@@ -116,22 +114,6 @@ body {
     margin-bottom: 45px;
 }
 
-#content h3 {
-    color: #242424;
-    font-size: 35px;
-    font-weight: 300;
-    text-align: left;
-    margin-left: 41px;
-    margin-top: 50px;
-    margin-bottom: 52px;
-}
-
-#content h5 {
-    color: #242424;
-    font-size: 24px;
-    text-align: left;
-}
-
 #content #map {
     width: 720px;
     height: 500px;
@@ -140,73 +122,23 @@ body {
     margin: 0px 0px 100px 30px;
 }
 
-#content .box_text {
-    /*width: 450px;*/
+#content #box_text {
     height: 545px;
     background-color: #ffffff;
     float: right;
-    /*padding: 49px 114px 51px 10px;*/
     margin-bottom: 100px;
     margin-right: 15px;
     overflow: auto;
     position: relative;
 }
 
-#content .box_text p {
+#content #box_text p {
     color: #434b4d;
     font-size: 18px;
     font-weight: 300;
     text-align: left;
     margin-bottom: 10px;
     font-family: Arial;
-}
-
-#content .media {
-    margin-right: 0;
-}
-
-#content #box {
-    background-color: #ffffff;
-    width: 1238px;
-    margin: 0 auto;
-    padding: 37px;
-}
-
-#content #box p {
-    color: #242424;
-    font-size: 24px;
-    font-weight: 100;
-    text-align: left;
-    margin-top: 37px;
-    margin-bottom: 30px;
-}
-
-#content #box input {
-    border: 1px solid #a0a0a0;
-    background-color: #f5f5f5;
-    width: 457px;
-    height: 34px;
-    padding-left: 10px;
-    font-size: 20px;
-    font-weight: 100;
-    margin-bottom: 12px;
-}
-
-#content #box a {
-    display: inline-block;
-    background-color: #8cbbd3;
-    clear: both;
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 300;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 30px;
-    padding: 11px 51px;
-}
-
-#content #box a:hover {
-    background-color: #5ba1d3;
 }
 
 #footer {
@@ -227,23 +159,19 @@ body {
     display: inline;
 }
 
-#click_to_view_a_marker {
+.Way {
     background-color: #b5b7ba;
     width: 495px;
     cursor: pointer;
-    /*height: 100px;*/
+    height: 100px;
 }
 
-#click_to_view_a_marker:hover {
+.Way:hover {
     background-color: #4d4d4d; 
 }
 
-#click_to_view_a_marker:hover span{
+.Way:hover span{
     color: #fff;
-}
-
-.in {
-    background: transparent;
 }
 
 .menu_head {
@@ -272,27 +200,12 @@ body {
     float: left;
 }
 
-.view {
-    width: 20px;
-    height: 20px;
-}
-
-.type {
-    width: 20px;
-    height: 20px;
-}
-
 #computing {
     width: 80px;
     height: 40px;
 }
 
-.pay {
-    background: #ff8c00;
-    border-color: #ff8c00;
-}
-
-#content .box_text a {
+#content #box_text a {
     border: 1px solid #ccc;
     color: #000;
     font-size: 14px;
@@ -301,8 +214,16 @@ body {
     text-decoration: none;
 }
 
-.details {
-    width: 50px;
-    background: #f08080;
-    border-color: #f08080;
+.one {
+    font-size: 14px;
+    line-height: 0.5;
+}
+
+.two {
+    font-size: 11px;
+}
+
+.mosearchresult:hover {
+    background-color: #5ba1d3;
+    cursor: pointer;
 }
