@@ -1,193 +1,135 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <title>TheRightPath</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.minical.plain.css">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" /> 
-    
-    <!-- <script src="http://api-maps.yandex.ua/2.0/?load=package.full&lang=uk-UA&mode=debug" type="text/javascript"></script>
-    <script src="//yandex.st/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
-    <script src="balloon_and_hint.js" type="text/javascript"></script>-->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
 </head>
+
 <body>
-  <div id="content">
-    <div id="header">
-      <span id="logo">TheRightPath</span>
-      <a href="#">Пошук маршруту</a>/
-		  <a href="Station.html">Пошук по станції</a>/
-      <a href="Train.html">БД потягів</a>/		
-    </div>
-    
-    <h1>Сервіс пошуку потягів та маршрутів «TheRightPath»</h1>
-    <div id="center">
-      <div id="selection">
-       <table>
-           <!--action="php/CheckWay.php"-->
-            <form method="POST">
-                <tbody>
-                    <tr>
-                       <td>
-                          <div class="form_div">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <p class="in">Звідки </p>
-                                </td>
-                                <td>
-                                    <div>
-                                        <input type="text" name="St_1" id="St_1" placeholder="Введіть початкову станцію" required onclick="$(this).css ('border-color','#ccc')"> 
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="in" >Куди </p>
-                                </td>
-                                <td>
-                                    <div>
-                                        <input type="text" name="St_2" id="St_2" placeholder="Введіть кінцеву станцію" required onclick="$(this).css ('border-color','#ccc')"> 
-                                    </div>
-                                </td>
-                            </tr>
-                     </tbody>
-                    </table>
-                 </div> 
-                       </td>
-                        <td>
-                           <div class="form_div"> 
-                              <!--<img src="img/icon_calendar.png">-->
-                               <input type="date" id="dat" name="dat" placeholder="Дата" required onclick="$(this).css ('border-color','#ccc')"> 
-                               <!--<div>
-                                    <option class="Date"></option>
-                                </div>-->
-                            </div>
-                        </td>
-                        <td>
-                           <div class="form_div"> 
-                           <input class="view" id="v1" type="checkbox" name="v1" value="1" checked title="Швидкісний">
-                           <input class="view" id="v2" type="checkbox" name="v2" value="2" checked title="Фірмовий">
-                           <input class="view" id="v3" type="checkbox" name="v3" value="3" checked title="Швидкий">
-                           <input class="view" id="v4" type="checkbox" name="v4" value="4" checked title="Пасажирський">
-                           <input class="view" id="v5" type="checkbox" name="v5" value="5" checked title="Електричка">
-                            </div>
-                        </td>
-                        <td>
-                           <div class="form_div"> 
-                           <input class="type" id="t1" type="checkbox" name="t1" value="1" checked title="СВ">
-                           <input class="type" id="t2" type="checkbox" name="t2" value="2" checked title="Люкс"> 
-                           <input class="type" id="t3" type="checkbox" name="t3" value="3" checked title="Купе">
-                           <input class="type" id="t4" type="checkbox" name="t4" value="4" checked title="Плацкарт">
-                           <input class="type" id="t5" type="checkbox" name="t5" value="5" checked title="Сидячий 1-го класу">
-                           <input class="type" id="t6" type="checkbox" name="t6" value="5" checked title="Сидячий 2-го класу">
-                            </div>
-                        </td>
-                        <td>
-                           <div class="form_div"> 
-                                <p>
-                                <select name="trans" id="trans" >
+    <div id="content">
+        <div id="header">
+            <span id="logo">TheRightPath</span>
+            <a href="#">Пошук маршруту</a>/
+            <a href="Station.html">Пошук по станції</a>/
+            <a href="Train.html">БД потягів</a>/
+        </div>
+
+        <h1>Сервіс пошуку потягів та маршрутів «TheRightPath»</h1>
+        <div id="center">
+            <div id="selection">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="form_div">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p class="in">Звідки </p>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <input type="text" name="St_1" id="St_1" placeholder="Введіть початкову станцію" autocomplete="off" required onclick="$(this).css ('border-color','#ccc')" maxlength="30">
+                                                        <div id="kabsearchform1">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="in">Куди </p>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <input type="text" name="St_2" id="St_2" placeholder="Введіть кінцеву станцію" required autocomplete="off" onclick="$(this).css ('border-color','#ccc')" maxlength="30">
+                                                        <div id="kabsearchform2">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form_div">
+                                    <input type="date" id="dat" name="dat" placeholder="Дата" required onclick="$(this).css ('border-color','#ccc')">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form_div">
+                                    <input class="view" id="v1" type="checkbox" name="v" value="1" checked title="Швидкісний">
+                                    <input class="view" id="v2" type="checkbox" name="v" value="2" checked title="Фірмовий">
+                                    <input class="view" id="v3" type="checkbox" name="v" value="3" checked title="Швидкий">
+                                    <input class="view" id="v4" type="checkbox" name="v" value="4" checked title="Пасажирський">
+                                    <input class="view" id="v5" type="checkbox" name="v" value="5" checked title="Електричка">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form_div">
+                                    <input class="type" id="t1" type="checkbox" name="t" value="1" checked title="СВ">
+                                    <input class="type" id="t2" type="checkbox" name="t" value="2" checked title="Люкс">
+                                    <input class="type" id="t3" type="checkbox" name="t" value="3" checked title="Купе">
+                                    <input class="type" id="t4" type="checkbox" name="t" value="4" checked title="Плацкарт">
+                                    <input class="type" id="t5" type="checkbox" name="t" value="5" checked title="Сидячий 1-го класу">
+                                    <input class="type" id="t6" type="checkbox" name="t" value="6" checked title="Сидячий 2-го класу">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form_div">
+                                    <p>
+                                        <select name="trans" id="trans">
                                   <option class="transplant" value="1">Без пересадок</option>
                                   <option class="transplant" value="2">З пересадками</option>
                                 </select>
-                              </p>
-                          </div>
-                        </td>
-                        <td>
-                           <div class="form_div"> 
-                                <p>
-                                <select name="sort" id="sort">
+                                    </p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form_div">
+                                    <p>
+                                        <select name="sort" id="sort">
                                   <option class="Sort" value="1">Швидкий</option>
                                   <option class="Sort" value="2">Дешевий</option>
                                   <option class="Sort" value="3">Час чекання пересадки</option>
                                 </select>
-                              </p>
-                          </div>
-                        </td>
-                        <td>
-                           <div class="form_div"> 
-                                <button id="computing">Розрахувати</button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </form>
-        </table>
-      </div>
-       <!-- <img src="img/photo.png" id="avatar">-->
+                                    </p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form_div">
+                                    <button id="computing">Розрахувати</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-      <div id="map"></div>
-       
-      <div class="box_text">
-          <div id="click_to_view_a_marker">
-              <p> 
-                  &nbsp;&nbsp;<span>1.</span> 
-                  <span style='padding-left:50px;'> </span>
-                  <span>Дніпро головний - Київ пасажирський</span> 
-            </p>
-             <form method="LINK" action="#"> 
-              <p>    
-                  <span style='padding-left:30px;'> </span> 
-                  <span>В дорозі: 08 г 33 хв </span>
-                  <span style='padding-left:50px;'> </span> 
-                  <span>23.08.2017 22:25</span>
-                  <span style='padding-left:50px;'> </span>  
-                      <!--<a class="details" href="Details.html" target="_blank">Деталі</a>    -->
-            </p>
-             </form>
-              <form method="LINK" action="#"> 
-              <p> 
-                <span style='padding-left:230px;'> </span>
-                <span>24.08.2017 06:58</span> 
-                  <span style='padding-left:50px;'> </span>
-                      <a class="pay" href="Pay.html" target="_blank">Придбати</a>
-            </p>
-            </form> 
-          </div>
-          
-          <div id="click_to_view_a_marker">
-            <p> 
-                  &nbsp;&nbsp;<span>2.</span> 
-                  <span style='padding-left:50px;'> </span>
-                  <span>St_1 - St_2</span> 
-            </p>
-             <form method="LINK" action="#">  
-              <p> 
-                  <span style='padding-left:30px;'> </span> 
-                  <span>В дорозі: 11 г 31 хв </span>
-                  <span style='padding-left:50px;'> </span> 
-                  <span>10.10.2017 19:44</span>
-                  <span style='padding-left:50px;'> </span> 
-                  <!--<a class="details" href="Details.html" target="_blank">Деталі</a>--> 
-            </p>
-             </form>
-             <form method="LINK" action="#">  
-              <p> 
-                <span style='padding-left:230px;'> </span>
-                <span>11.10.2017 07:13</span> 
-                  <span style='padding-left:50px;'> </span> 
-                  <a class="pay" href="Pay.html" target="_blank">Придбати</a> 
-            </p>
-            </form>
-          </div>
-      </div>
+            <div id="map"></div>
+
+            <div id="box_text" hidden="false">
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2017/
+        <p>Керівник: Гапоненко Н. В., Розробник: Нікуліцов Є. Е.</p>
+        <span class="Way" style="width: 100px;"></span>
 
     </div>
-  </div>
-  <div id="footer">
-    Copyright &copy; 2017/ <p>Керівник: , Розробник: Нікуліцов Є. Е.</p>
-       <span style="width: 100px;"></span>
-        
-  </div>
 
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery.minical.plain.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYnxQlUA6bBNupyd0bsT253iPnpWckpSg&v=3.exp"></script>
-  <script src="js/balloon_and_hint.js" type="text/javascript"></script>
-  <script src="js/tic.js" type="text/javascript"></script>
-  <script src="ajax/IndexForm.js" type="text/javascript"></script>
-  <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
-  <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.minical.plain.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYnxQlUA6bBNupyd0bsT253iPnpWckpSg&v=3.exp"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/ajax/IndexForm.js" type="text/javascript"></script>
+    <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
 </body>
+
 </html>
